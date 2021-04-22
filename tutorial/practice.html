@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+ <!-- 1. html:5를 입력하면 html양식 자동 완성 -->
+
+<html lang="en">
+<!-- 2. lang 속성은 웹 동작에는 영향을 주지 않는다. 검색 엔진이 웹 페이지를 탐색할때 알려주는 역할. -->
+
+<head>
+    <!-- 3. head태그 내부에는 올 수 있는 태그 : meta, title, script, link, style, base -->
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Basic</title>
+
+    <!-- 4. style태그를 이용한 내부 스타일 방법 -->
+    <!-- 
+    <style>
+        h1{
+            color:white;
+            background:black;
+        }
+    </style>
+    -->
+
+    <!-- 4-2. 외부 스타일 방법 -->
+    <link rel="stylesheet" href="Style.css">
+    <!-- link 태그를 이용해 외부의 css파일을 연결 -->
+
+    <!-- 5. script태그를 이용한 내부 자바스크립트 실행 -->
+    <!--
+    <script>
+        alert('Hello JavaScript .. !');
+    </script>
+    -->
+
+    <!-- 5-2. 외부 자바스크립트 실행 -->
+    <script src="OuterJavaScript.js"></script>
+
+</head>
+<body>
+    <!-- 이것은 주석이다. -->
+    <!-- element에는 content를 가질 수 있는 것이 있고, 없는 것이 있다. -->
+    <h1>Hello World..!</h1>
+    <h2>Hello World..!</h2>
+    <h3>Hello World..!</h3>
+    <h4>Hello World..!</h4>
+    <h5>Hello World..!</h5>
+    <h6>Hello World..!</h6>
+    <p>본문 문단 생성</p>
+    <br> 줄바꿈
+    <hr>수평 줄 삽입
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Phasellus sem tortor, volutpat vitae euismod eget</p>
+
+    <h1>홍차</h1>
+    <hr>
+    <h2>정의</h2>
+    <p>홍차는 백차, 녹차, 우롱차보다 더 많이 발효된 차의 일종이다. 동양에서는 찻물의 빛이 붉기 떄문에 홍차라고 부르지만, 서양에서는 찻잎의 색깔 때문에 'black tea'라고 부른다.</p>
+    <br>
+    <h2>등급</h2>
+    <p>홍차는 여러 가지로 등급이 매겨진다. 일반적으로 찻잎의 모양에 따른 등급과 가공 상태에 따른 등급을 조합하여 표시한다.</p>
+    <p>- 브로큰 페코</p>
+    <p>- 브로큰 페코 수숑</p>
+    <p>- 브로큰 오렌지 페코 패닝</p>
+
+    <!-- &nbsp; - '공백' / &lt; - '<' / &gt; - '>' / &amp; - '&' -->
+    <h1>공백이 있는 글자</h1>
+    <h1>공백이    있는    글자</h1>
+    <h1>공백이&nbsp;&nbsp;&nbsp;있는&nbsp;&nbsp;&nbsp;글자</h1>
+    <h1>&nbsp;&nbsp;&nbsp;공백이&amp;있는 &lt;글자&gt;</h1>
+
+    <!-- a태그(anchor) : 다른 웹 페이지나 웹 페이지 내부의 특정 위치로 이동할 때(하이퍼링크) 사용하는 태그 -->
+    <!-- 다른 웹 페이지로 이동 -->
+    <a href="http://www.hanbit.co.kr">한빛미디어</a><br>
+    <a href="http://www.naver.com/">네이버</a><br>
+    <a href="http://www.daum.com/">다음</a><br>
+
+    <!-- 웹 페이지 내부의 특정 위치로 이동 -->
+    <a href="#alpha">Alpha 부분</a>
+    <a href="#beta">Beta 부분</a>
+    <a href="#gamma">Gamma 부분</a>
+    <hr>
+    <h1 id="alpha">Alpha</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h1 id="beta">Beta</h1>
+    <p>Vivamus elementum pretium tortor, in tincidunt mauris gravida et.</p>
+    <h1 id="gamma">gamma</h1>
+    <p>Phasellus sem tortor, volutpat vitae euismod eget, sagittis sed</p>
+
+    <!-- 빈 링크 만들기 -->
+    <a id="news_press_menu" href="#" class="btn_nctg">언론사 전체보기</a>
+    <ul id="press_dropdown" class="cpress_list hide">
+        <li><a href="#">언론사 전체보기</a></li>
+        <li><a href="#">종합지</a></li>
+        <li><a href="#">방송/통신</a></li>
+        <li><a href="#">경제지</a></li>
+        <li><a href="#">인터넷</a></li>
+        <li><a href="#">IT/영자지</a></li>
+        <li><a href="#">스포츠/연예</a></li>
+        <li><a href="#">매거진/전문지</a></li>
+        <li><a href="#">지역지</a></li>
+    </ul>
+
+    <!-- 글자 모양 태그 -->
+    <!-- small - 작은 글자 / sub - 아래 첨자 / sup - 위 첨자 / ins - 밑줄 글자 / del - 취소선 그어진 글자 -->
+    <h1><b>Loremipsumdolor sit amet</b></h1>
+    <h1><i>Loremipsumdolor sit amet</i></h1>
+    <h1><small>Loremipsumdolor sit amet</small></h1>
+    <h1>Loremipsumdolor <sub>sit amet</sub></h1>
+    <h1>Loremipsumdolor <sup>sit amet</sup></h1>
+    <h1><ins>Loremipsumdolor sit amet</ins></h1>
+    <h1><del>Loremipsumdolor sit amet</del></h1>
+    <hr>
+    <b>Loremipsumdolor sit amet</b><br>
+    <i>Loremipsumdolor sit amet</i><br>
+    <small>Loremipsumdolor sit amet</small><br>
+    Loremipsumdolor <sub>sit amet</sub><br>
+    Loremipsumdolor <sup>sit amet</sup><br>
+    <ins>Loremipsumdolor sit amet</ins><br>
+    <del>Loremipsumdolor sit amet</del><br>
+
+    <!-- 목록 태그 -->
+    <!-- ul(unordered list) - 순서 없는 목록 / ol(ordered list) - 순서 있는 목록 / li(list item) - 아이템 -->
+    <ul>
+        <li>
+            <b>과일</b>
+            <ol>
+                <li>사과</li>
+                <li>바나나</li>
+                <li>오렌지</li>
+            </ol>
+        </li>
+        <li>
+            <b>채소</b>
+            <ol>
+                <li>상추</li>
+                <li>치커리</li>
+                <li>양배추</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- 테이블 태그 -->
+    <!-- table - 테이블 삽입 / tr(table row) - 행 삽입 / th(table heading) - 제목 셀 / td(table data) - 일반 셀 -->
+    <table border="1">  <!-- border은 표 테두리 두께 지정 -->
+        <thead>
+            <tr>
+                <th></th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1교시</td>
+                <td>영어</td>
+                <td>국어</td>
+                <td>과학</td>
+                <td>미술</td>
+                <td>기술</td>
+            </tr>
+            <tr>
+                <td>2교시</td>
+                <td>도덕</td>
+                <td>체육</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td>사회</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- colspan - 셀 너비 지정(병합) / rowspan - 셀 높이 지정(병합) -->
+    <table border="1">
+        <tr>
+            <th colspan="2">지역별 홍차</th>
+        </tr>
+        <tr>
+            <th rowspan="3">중국</th>
+            <td>정산소종</td>
+        </tr>
+        <tr><td>기문</td></tr>
+        <tr><td>운남</td></tr>
+        <tr>
+            <th rowspan="4">인도 및 스리랑카</th>
+            <td>아삼</td>
+        </tr>
+        <tr><td>실론</td></tr>
+        <tr><td>다질링</td></tr>
+        <tr><td>닐기리</td></tr>
+    </table>
+
+    <!-- 미디어 태그 -->
+    <!-- 이미지 삽입 : img태그는 src(경로), alt(이미지가 없을 때 나오는 글), width(너비), height(높이) 등의 속성(attribute)을 지님 -->
+    <img src="http://www.hanbit.co.kr/images/common/logo_hanbit.png" alt="펭귄" width="300">
+    <img src="Nothing" alt="그림이 존재하지 않습니다." width="300">
+
+    <!-- 오디오 삽입 : preload(재생 준비 중일떄 데이터를 모두 불러올지 여부), autoplay(자동 재생 여부), loop(반복 재생 여부), control(재생 도구 출력 여부) -->
+    <audio src="Kalimba.mp3" controls="controls"></audio>
+    <!-- 웹 브라우저 마다 지원하는 확장자가 다르기 떄문에 음악 파일의 확장자 문제를 해결하기 위해 source태그를 이용할 수 있다. -->
+    <audio controls="controls">
+        <source src="Kalimba.mp3" type="audio/mp3">
+        <source src="Kalimba.ogg" type="audio/ogg">
+    </audio>
+
+    <!-- 비디오 삽입 preload(재생 준비 중일떄 데이터를 모두 불러올지 여부), autoplay(자동 재생 여부), loop(반복 재생 여부), control(재생 도구 출력 여부) -->
+    <video controls="controls" poster="http://placehold.it/640x360">    <!-- 웹 페이지 개발을 하다보면 의미 없는 이미지를 삽입해서 크기를 알아볼 때가 있다. 
+                                                                                이때 유용한 사이트 'http://placehold.it/너비x높이', 'http://placekitten.com/너비x높이' -->
+        <source src="Wildlife.mp4" type="video/mp4">
+        <source src="Wildlife.webm" type="video/ewbm">
+    </video>
+
+    <!-- 입력 양식 태그 -->
+    <form>
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+
+    <!-- 입력 데이터 전송 -->
+    <!-- <form action="전송 위치" method="전송 방식(GET/POST)"></form> -->
+    <form method="get">     <!-- GET 전송 : 전송 위치 URL로 직접 전달, 데이터 크기 한정적 -->
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+
+    <form method="post">        <!-- POST 전송 : 별도의 방법으로 전달 -->
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+
+    <!-- 각종 입력 양식 태그 -->
+    <form>
+        <!-- 사용자가 입력하는 입력 양식 -->
+        <input type="text" name="text" value="text"><br>        <!-- 글자 입력 -->
+        <input type="password" name="password" value="password"><br>        <!-- 비밀번호 입력 -->
+        <input type="file" name="file" value="file"><br>        <!-- 파일 첨부 -->
+        <input type="checkbox" name="checkbox" value="checkbox"><br>        <!-- 체크 박스 -->
+        <input type="radio" name="radio" value="radio"><br>         <!-- 라디오 버튼(택일) -->
+
+        <!-- 보이지 않는 입력 양식 -->
+        <input type="hidden" name="hidden" value="hidden"><br>      <!-- 해당 부분 표시 안 함-->
+
+        <!-- 버튼 -->
+        <input type="button" value="button"><br>        <!-- 버튼 -->
+        <input type="reset" value="reset"><br>      <!-- 초기화 버튼 -->
+        <input type="submit" value="submit"><br>        <!-- 제출 버튼 -->
+        <input type="image" src="http://placehold.it/100x100">      <!-- 이미지 틀 -->
+    </form>
+
+    <!-- label 태그 : 자동 포커싱 -->
+    <form>
+        <label for="name">이름</label>
+        <input id="name" type="text">
+
+        <label for="gender">성별</label>
+        <label for="man">남</label>
+        <input type="radio" id="man" name="gender">     <!-- name 속성을 이용 -->
+        <label for="woman">여</label>
+        <input type="radio" id="woman" name="gender">   <!-- name 속성을 이용 -->
+    </form>
+
+    <form>
+        <table>
+            <tr>
+                <td><label for="username">이름</label></td>
+                <td><input id="username" type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input id="man" type="radio" name="gender" value="m">
+                    <label for="man">남자</label>
+                    <input id="woman" type="radio" name="gender" value="w">
+                    <label for="woman">여자</label>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="가입">
+    </form>
+
+    <!-- select 태그 : 목록 중 하나 또는 다수 선택(option, multiple, optgroup) -->
+    <!-- 다만, 최근엔 select태그 대신 자바스크립트를 활용하는 추세 -->
+    <!-- option : 하나 선택 -->
+    <select>
+        <option>김밥</option>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>어묵</option>
+    </select>
+
+    <!-- multiple : 다수 선택 (모바일에서는 이쁘게 보이지만, 데스크톱에서는 이상하기 때문에 잘 사용하지 않음) -->       
+    <select multiple="multiple">
+        <option>김밥</option>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>어묵</option>
+    </select>
+
+    <!-- optgroup : 목록 안에 목록 -->
+    <select>
+        <optgroup label="HTML5">
+            <option>Multimedia Tag</option>
+            <option>Connectivity</option>
+            <option>Device Access</option>
+        </optgroup>
+        <optgroup label="CSS3">
+            <option>Animation</option>
+            <option>3D Transform</option>
+        </optgroup>
+    </select>
+
+    <!-- fieldset태그 - legend태그 : 입력양식을 그룹화 -->
+    <form>
+        <fieldset>
+            <legend>입력 양식</legend>
+            <table>
+                <tr>
+                    <td><label for="name">이름</label></td>
+                    <td><input id="name" type="text"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">이메일</label></td>
+                    <td><input id="mail" type="email"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </fieldset>
+    </form>
+
+    <!-- textarea 태그 -->
+    <textarea>Textarea 태그
+        Textarea 태그</textarea>
+    <textarea>
+        Textarea 태그
+        Textarea 태그
+    </textarea>
+
+
+    <!-- 공간 분할 : div, span -->
+    <!-- div는 블록 형식 분할, span은 인라인 형식 분할 -->
+    <div>div태그 - block 형식</div>
+    <div>div태그 - block 형식</div>
+    <div>div태그 - block 형식</div>
+    <div>div태그 - block 형식</div>
+    <hr>
+    <span>span태그 - inline 형식</span>
+    <span>span태그 - inline 형식</span>
+    <span>span태그 - inline 형식</span>
+    <span>span태그 - inline 형식</span>
+
+    <!-- 블록 형식 태그: div, h1~h6, p, 목록, table -->
+    <!-- 인라인 형식 태그: span, a, input, 글자 모양, 입력 양식 -->
+    <h1>h1 태그</h1>
+    <p>p 태그</p>
+    <hr>
+    <a href="#">a 태그</a>
+    <i>i 태그</i>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <!-- 시맨틱 웹 : 컴퓨터가 코드를 읽고 의미를 인식할 수 있는 지능형 웹 -->
+    <!-- HTML5의 기본적인 시맨틱 웹은 110p참조('HTML5 웹 프로그래밍 입문') -->
+    <!-- 예시 -->
+    
+    <div>
+        <h1>HTML5 기본</h1>
+    </div>
+    <div>
+        <ul>
+            <li><a href="#">메뉴 - 1</a></li>
+            <li><a href="#">메뉴 - 2</a></li>
+            <li><a href="#">메뉴 - 3</a></li>
+        </ul>
+    </div>
+    <div>
+        <div>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+    <div>
+        <span>서울특별시 강서구 내발산동</span>
+    </div>
+
+    <hr>
+    <hr>
+    <hr>
+
+    <!-- header : 머리말 -->
+    <!-- nav : 하이퍼링크 모아둔 내비게이션 -->
+    <!-- aside : 본문 흐름에 벗어난 노트, 팁 -->
+    <!-- section : 문서 -->
+    <!-- article : 본문 -->
+    <!-- 꼬리말(저자, 저작권 등) -->
+    <header>
+        <h1>HTML5 기본</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴 - 1</a></li>
+            <li><a href="#">메뉴 - 2</a></li>
+            <li><a href="#">메뉴 - 3</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article>
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h1>Loorem ipsum dolor sit amet</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+    </section>
+    <footer>
+        <address>서울특별시 강서구 마곡동</address>
+    </footer>
+
+
+
+</body>
+</html>
