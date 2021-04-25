@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS 스타일 시트 활용 -->
+    <title>CSS3</title>
+    
+    <!-- 선택자 참고 사이트 http://www.w3.org/TR/CSS/ -->
+    <style>
+        
+        /* 1. 기본 태그 선택자
+        h1 {
+            color:red;
+            background-color:orange;
+        }
+        p {color:blue;}
+        */
+
+        /* 2. 전체 선택자  
+        * {color:red;}
+        */
+
+        /* 3. id 선택자 */
+        #header {
+            width:800px; margin:0 auto; background:red;
+        }
+        #wrap {
+            width:800px; margin:0 auto; overflow:hidden;
+        }
+        #aside {
+            width:200px; float:left; background:blue;
+        }
+        #content {
+            width:600px; float:left; background:green;
+        }
+
+        /* 4. 클래스 선택자*/
+        .select {color:red;}
+        /* 클래스 선택자는 동시 적용이 가능*/
+        .item {color:red;}
+        .header {background-color:blue;}
+        /* 클래스 선택자가 중복될 경우, 태그 선택자와 클래스 선택자를 함께 사용(id는 중복될 수 없지만 class는 중복 가능) */
+        li.select {color:red;}
+
+        /* 5. 속성 선택자 : input태그를 선택할 때 속성(type) 선택자 주로 사용 */
+        input[type="text"] {background: red;}
+        input[type="password"] {background: blue;}
+
+        /* 6. 후손 선택자 : id선택자A 후손선택자B (띄어쓰기 이용) */
+        #header2 h1 {color:red;}
+        #section h1 {color:orange;}
+
+        /* 6-2. 자손 선택자 : id선택자A > 자손선택자B (테이블에서 사용하지 않음. tbody태그가 자동으로 추가되기 때문에 자손 선택자 사용이 번거로움)*/
+        #header3 > h1 {color:red;}
+        #section2 > h1 {color:orange;}
+
+        /* 7. 반응 선택자 : :active 마우스 클릭 상태, :hover 마우스 커서 올려둔 상태 */
+        h3:hover {color:red;} 
+        h3:active {color:blue;}
+
+        /* 8. 상태 선택자 : :checked 체크 상태의 input태그, :focus 포커싱 된 input태그, :enabled 사용 가능 input태그, :disabled 사용 불가능 input태그 */
+        input:enabled {background-color: white;}
+        input:disabled {background-color: gray;}
+        input:focus {background-color: orange;}
+
+        /* 9. 구조 선택자 : :first-child 형제 중 첫째, :last-child 형제 중 막내, :nth-child(수열) 앞에서부터 [수열]에 따라, :nth-last-child(수열) 뒤에서부터 [수열]에 따라 */
+        #structure ul {overflow: hidden;}
+        #structure li {
+            list-style:none; float:left; padding:15px;
+        }
+        #structure li:first-child {border-radius: 10px 0 0 10px;}
+        #structure li:last-child {border-radius: 0 10px 10px 0;}
+        #structure li:nth-child(2n) {background-color: #FF0003;}
+        #structure li:nth-child(2n+1) {background-color: #800000;}
+        
+        /* 오류 사례 : #structureFalse li > a:first-child {color:red;} */
+        #structureFalse li:first-child > a {color:red;}
+        
+        /* 10. CSS의 단위 
+        p:nth-child(1) {}
+        p:nth-child(2) {font-size:100%;}
+        p:nth-child(3) {font-size:150%;}
+        p:nth-child(4) {font-size:200%;}
+        
+        p:nth-child(1) {}
+        p:nth-child(2) {font-size:1.0em;}   // em도 %와 같은 배수 개념
+        p:nth-child(3) {font-size:1.5em;}
+        p:nth-child(4) {font-size:2.0em;}
+        
+        p:nth-child(1) {}
+        p:nth-child(2) {font-size:16px;}
+        p:nth-child(3) {font-size:24px;}
+        p:nth-child(4) {font-size:32px;}
+
+        h1 {background-color:red;}
+        h1 {background-color:orange;}
+        h1 {background-color:blue;}
+        h1 {background-color:rgb(255,255,255);}     // rgb컬러의 값 사용 (0~255)
+        h1 {background-color:rgba(255,255,255,0.5);}    // rgba의 마지막 값은 불투명도를 나타냄
+        h1 {background-color:#0094FF;}      // #000000 여섯 숫자는 두자리씩 각 rgb의 색상 값을 나타냄. F는 16진수로서, 16(10진수)을 나타냄 (F=16*16=256)
+
+        body {background-image:url('Desert.jpg');}      // url사용 가능
+        */
+
+        /* 스타일 시트 컴파일 엔진(https://sass-lang.com/)을 이용해 Sass스타일시트를 css스타일시트로 변환 가능 */
+        
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- 1. 기본 선택자 -->
+    <h1>CSS3 선택자 기본</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Nunc nisl turpis, aliquet et gravida non, facilisis a sem.</p>
+
+    <!-- 3. id 선택자 -->
+    <div id="header">
+        <h1>#header 태그</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>#aside 태그</h1>
+        </div>
+        <div id="content">
+            <h1>#content 태그</h1>
+        </div>
+    </div>
+
+    <!-- 4. 클래스 선택자 -->
+    <ul>
+        <li class="select">사과</li>
+        <li>바나나</li>
+        <li class="select">오렌지</li>
+        <li>감</li>
+    </ul>
+
+    <h1 class="item header">동해물과 백두산이</h1>
+    <ul>
+        <li class="select">사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+        <li>감</li>
+    </ul>
+
+    <!-- 5. 속성 선택자 -->
+    <form>
+        <input type="text">
+        <input type="password">
+    </form>
+
+    <!-- 6. 후손 선택자, 자손 선택자 -->
+    <div id="header2">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div id="header3">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav2">
+            <h1>Navigation</h1>
+        </div>
+    </div>
+    <div id="section2">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <!-- 7. 반응 선택자 -->
+    <h3>반응 선택자</h3>
+
+    <!-- 8. 상태 선택자 -->
+    <h2>사용 가능</h2>
+    <input>
+    <input value="enabled">
+    <h2>사용 불가능</h2>
+    <input disabled="disabled">
+    <input value="disabled" disabled="disabled">
+
+    <!-- 9. 구조 선택자 -->
+    <div id="structure">
+        <ul>
+            <li>첫 번째</li>
+            <li>두 번째</li>
+            <li>세 번째</li>
+            <li>네 번째</li>
+            <li>다섯 번째</li>
+            <li>여섯 번째</li>
+            <li>일곱 번째</li>
+        </ul>
+    </div>
+
+    <div id="structureFalse">
+        <ul>
+            <li><a href="#">주의 사항</a></li>
+            <li><a href="#">주의 사항</a></li>
+            <li><a href="#">주의 사항</a></li>
+            <li><a href="#">주의 사항</a></li>
+            <li><a href="#">주의 사항</a></li>
+            <li><a href="#">주의 사항</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
