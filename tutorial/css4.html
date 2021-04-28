@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Property Basic</title>
+    <style>
+
+        /* 1. 배치 */
+        #container {
+            width:500px; height:300px;
+            border: 3px solid black;
+            overflow: hidden;
+            position: relative;
+        }
+        .circle {
+            position: absolute;
+            width:100px; height:100px;
+            border-radius: 50% 50%;
+        }
+        #red {
+            background:red;
+            left:20px; top:20px;
+        }
+        #green {
+            background: green;
+            right:20px; top:20px;
+        }
+        #blue {
+            background: blue;
+            right:20px; bottom:20px;
+        }
+        #yellow {
+            background: yellow;
+            left:20px; bottom:20px;
+        }
+
+        /* 2. 중앙 배치 */
+        #con {
+            background:red;
+            width:700px; height:450px;
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: -250px;
+            margin-top: -125px;
+        }
+        #container2 {
+            width:500px; height:250px;
+            background:orange;
+            position: absolute;
+            left: 50%; top: 50%;
+            margin-left: -250px;
+            margin-top: -125px;
+        }
+
+        /* 3. 고정 바 배치 */
+        .top_bar {
+            background: red;
+            position: fixed;
+            left:0; top:0; right:0;
+            height:50px;
+        }
+        .left_bar {
+            background: blue;
+            position:fixed;
+            left:0; top:50px; bottom:0;
+            width:50px;
+        }
+
+        /* 4. 글자 생략(...) */
+        h1, p {
+            width:300px;
+        }
+        .ellipsis {
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- 1. 배치 -->
+    <h1>Dummy Text</h1>
+    <div id="container">
+        <div id="red" class="circle"></div>
+        <div id="green" class="circle"></div>
+        <div id="blue" class="circle"></div>
+        <div id="yellow" class="circle"></div>
+    </div>
+
+    <!-- 2. 중앙 배치 -->
+    <div id="con"><h1>전체</h1>
+        <div id="container2">
+            <h1>요소의 중앙 배치</h1>
+        </div>
+    </div>
+
+    <!-- 3. 고정 바 배치 -->
+    <div class="top_bar"></div>
+    <div class="left_bar"></div>
+
+<br><br>
+
+    <!-- 4. 글자 생략(...) -->
+    
+        <h1 class="ellipsis">Lorem ipsum dolor sit amet, consectetur</h1>
+        <p class="ellipsis">Lorem ipsum dolor sit amet, consectetur.Lorem ipsum dolor sit amet, consectetur.</p>
+    
+
+</body>
+</html>

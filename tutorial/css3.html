@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Property Basic</title>
+    <style>
+
+     /* 1. 위치 속성 */
+     .box {
+        width:100px; height:100px;
+        position: absolute;
+    }
+    .box:nth-child(1) {
+        background-color:red;
+        left:10px; top:10px;
+        z-index: 100;
+    }
+    .box:nth-child(2) {
+        background-color:green;
+        left:50px; top:50px;
+        z-index: 10;
+    }
+    .box:nth-child(3) {
+        background-color:blue;
+        left:90px; top:90px;
+        z-index: 1;     /* z-index값이 클수록 앞에 위치 */
+    }
+    #scroll {
+        width:400px; height:100px;
+        border:3px solid black;
+        position: relative;
+        overflow: scroll;       /* hidden: 벗어나는 부분 감추기, scroll: 벗어나는 부분 스크롤 */
+        /* 특정 축에만 스크롤을 생성할 때는, overflow-x, overflow-y 사용 */
+    }
+
+    /* 2. float 속성 */
+    div img {
+        float: left;
+    }
+
+    /* 3. 그림자와 그레디언트 속성 */
+    #box2 h1 {text-shadow: 5px 5px 5px black;}
+    #box2 {
+        border: 3px solid black;
+        box-shadow: 10px 10px 30px black, 10px 10px 20px orange, 10px 10px 30px red;
+        text-shadow: 5px 5px 5px black, 10px 10px 20px orange, 10px 10px 30px red;
+    }
+    /* 그레디언트는 https://CSS3gen.com에서 CSS3 Text Shadow Generator 또는 Box Shadow Generator를 사용하자. */
+
+    /* 4. 레이아웃 */
+    /* 4-1. 수평 정렬 */
+    div.container {
+        overflow: hidden;       /* hidden을 해주면 내용이 위와 아래로 배치되고 옆으로는 배치되지 않음(자손이 차지하는 너비를 전체로 본다) */
+    }
+    div.item {
+        float: left;
+        margin: 0 3px;
+        padding: 10px;
+        border: 1px solid black;
+    }
+    /* (방법2)clear속성을 이용할 수 있다. 
+    div. clear { clear : both; }
+    ...
+    <div class="clear"></div>    */
+
+    /* 4-2. 중앙 정렬 */
+    body {
+        margin: 0 auto;
+        width: 960px;
+    }
+
+    /* 4-3. One True 레이아웃 */
+    #middle {overflow: hidden;}
+    #left { float:left; width:150px; background:red;}
+    #right {float:right; width:350px; background:blue;}
+    #top {background: green;}
+    #bottom {background: purple;}
+
+    </style>
+</head>
+<body>
+    
+    <!-- 1. 위치 속성 -->
+    <h1>Lorem ipsum dolor amet</h1>
+    <div id="scroll">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor amet</h1>
+
+    <!-- 2. float 속성 -->
+    <div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F293%2F2018%2F06%2F04%2F0000022190_001_20180604084319036.jpg&type=sc960_832">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>In hac habitasse platea dictumst. Donec lobortis augue a metus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>In hac habitasse platea dictumst. Donec lobortis augue a metus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>In hac habitasse platea dictumst. Donec lobortis augue a metus.</p>
+    </div>
+
+    <!-- 3. 그림자와 그레디언트 속성 -->
+    <div id="box2">
+        <h1>Lorem ipsum dolor amet</h1>
+        <h2>Lorem ipsum dolor amet</h2>
+    </div>
+
+<br>
+<hr>
+<br>
+
+    <!-- 4. 레이아웃 -->
+    <div class="container">
+        <div class="item">메뉴 - 1</div>
+        <div class="item">메뉴 - 2</div>
+        <div class="item">메뉴 - 3</div>
+        <div class="item">메뉴 - 4</div>
+    </div>
+
+    <!-- 4-3. One True 레이아웃 -->
+    <div id="top">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+    <div id="middle">
+        <div id="left">Lorem ipsum dolor sit amet, consectetur adipiscing.</div>
+        <div id="right">Lorem ipsum dolor sit amet, consectetur elit.</div>
+    </div>
+    <div id="bottom">Lorem ipsum dolor sit amet, consectetur.</div>
+
+</body>
+</html>
