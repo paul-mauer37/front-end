@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Property Basic</title>
+    <style>
+
+        /* 1. 박스 속성  */
+        #div {
+            width:100px; height:100px;
+            background-color:red;
+            border: 20px solid black;
+            /* margin: 위쪽 오른쪽 아래쪽 왼쪽 */
+            /* padding: 위쪽 오른쪽 아래쪽 왼쪽 */
+            margin: 0 10px 0 30px;
+            padding: 0 30px 0 30px;
+        }
+        #div p {
+            width:100px; height:100px;
+            background-color:blue;
+            border: 20px solid black;
+            /* margin: 위아래 왼쪽오른쪽 */
+            /* padding: 위아래 왼쪽오른쪽 */
+            margin: 0 30px;
+            padding: 0 30px;
+        }
+
+        /* border: thick dashed black; (한 줄 표현) */
+        .box {
+            border-width: thick;
+            border-style: dashed;
+            border-color: black;
+            border-radius: 20px;
+            /* border-radius: 50px 40px 20px 10px; (왼쪽위 오른쪽위 오른쪽아래 왼쪽아래 : 한 줄 표현) */
+        }
+
+        /* 2. display 속성 */
+        #box {
+            display: none;
+        }
+        #box2 {
+            display: block;
+        }
+        #box3 {
+            display: inline;
+            background-color: red;
+            width: 100px; height: 50px; margin: 10px;
+        }
+        #box4 {
+            display: inline-block;
+            background-color: red;
+            width: 100px; height: 50px; margin: 10px;
+        }
+
+        /* 3. 이미지 속성 */
+        #body {
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-summer-cool-summer-icy-poster-banner-background-image_161878.jpg'), url('http://image.dongascience.com/Photo/2011/06/28/20110628-2[1].jpg');
+            background-size: 100% 250px;    /* 여기서 250px는 높이가 된다 */
+            /* background-size: 100%, 250px; (,로 구분되었으므로 100%와 250px는 각 이미지의 크기가 된다.) */
+        }
+        #body2 {
+            background-color: #E7E7E8;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-summer-cool-summer-icy-poster-banner-background-image_161878.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: scroll;    /* scroll: 스크롤에 따라 배경이미지 올라가고 내려감 */
+        }
+        #body3 {
+            background-color: #E7E7E8;
+            background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-summer-cool-summer-icy-poster-banner-background-image_161878.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;       /* fixed: 위치 고정 */
+            background-position:bottom;     /* background-position: 0px 50%; (x축 y축) */
+        }
+
+        /* 4. 글꼴 속성 */
+        .a { font-size:32px; }
+        .b { font-size:2em; }
+        .c { font-size:large; }
+        .d { font-size:small; }
+        .arial {font-family: '없는 글꼴', Arial;}
+        .roman {font-family:'Times New Roman', Arial;}      /* 글꼴이 없을 경우를 대비해 여러 개 입력 */
+        .big {font-size: 2em;}
+        .italic {font-style: italic;}
+        .bold {font-weight: bold;}
+        .center {text-align: center;}       /* span은 text-align을 먹지 않음(인라인 형태라서) */
+        .right {text-align: right;}
+
+        /* 5. 버튼 속성 */
+        .button {
+            width:150px;
+            height:70px;
+            background-color: #FF6A00;
+            border:10px solid #FFFFFF;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #A9A9A9;
+        }
+        .button > a {
+            display: block;
+            line-height:70px;
+            text-decoration: none;      /* 글자 밑줄 제거 */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 1. 박스 속성 -->
+    <div id="div">
+        <p></p>
+    </div>
+
+    <div class="box">
+        <h1>Lorem ipsum dolor amet</h1>
+    </div>
+
+<hr>
+
+    <!-- 2. display 속성 -->
+    <span>더미 객체</span>
+    <div id="box">대상 객체</div>
+    <span>더미 객체</span>
+<br>
+    <span>더미 객체</span>
+    <div id="box2">대상 객체</div>
+    <span>더미 객체</span>
+<br>
+    <p>의미 없는 더미 객체</p>
+    <span>더미 객체</span>
+    <div id="box3">대상 객체</div>
+    <span>더미 객체</span>
+    <p>의미 없는 더미 객체</p>
+<br>
+    <p>의미 없는 더미 객체</p>
+    <span>더미 객체</span>
+    <div id="box4">대상 객체</div>
+    <span>더미 객체</span>
+    <p>의미 없는 더미 객체</p>
+<br>
+    <!-- 3. 이미지 속성 -->
+    <div id="body">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Pellentesque est velit, laoreet vel rhoncus sit amet.</p>
+        <p>Proin vitae elit est, ut accumsan arcu. Sed consectetur.</p>
+        <p>Donec molestie massa id lorem hendrerit eu bibendum augue.</p>
+        <p>Morbi ut lorem in purus facilisis vulputate. Sed purus nibh.</p>
+    </div>
+    <div id="body2">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Pellentesque est velit, laoreet vel rhoncus sit amet.</p>
+        <p>Proin vitae elit est, ut accumsan arcu. Sed consectetur.</p>
+        <p>Donec molestie massa id lorem hendrerit eu bibendum augue.</p>
+        <p>Morbi ut lorem in purus facilisis vulputate. Sed purus nibh.</p>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Pellentesque est velit, laoreet vel rhoncus sit amet.</p>
+        <p>Proin vitae elit est, ut accumsan arcu. Sed consectetur.</p>
+        <p>Donec molestie massa id lorem hendrerit eu bibendum augue.</p>
+        <p>Morbi ut lorem in purus facilisis vulputate. Sed purus nibh.</p>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Pellentesque est velit, laoreet vel rhoncus sit amet.</p>
+        <p>Proin vitae elit est, ut accumsan arcu. Sed consectetur.</p>
+        <p>Donec molestie massa id lorem hendrerit eu bibendum augue.</p>
+        <p>Morbi ut lorem in purus facilisis vulputate. Sed purus nibh.</p>
+    </div>
+    <div id="body3">
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Pellentesque est velit, laoreet vel rhoncus sit amet.</p>
+        <p>Proin vitae elit est, ut accumsan arcu. Sed consectetur.</p>
+        <p>Donec molestie massa id lorem hendrerit eu bibendum augue.</p>
+        <p>Morbi ut lorem in purus facilisis vulputate. Sed purus nibh.</p>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Pellentesque est velit, laoreet vel rhoncus sit amet.</p>
+        <p>Proin vitae elit est, ut accumsan arcu. Sed consectetur.</p>
+        <p>Donec molestie massa id lorem hendrerit eu bibendum augue.</p>
+        <p>Morbi ut lorem in purus facilisis vulputate. Sed purus nibh.</p>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Pellentesque est velit, laoreet vel rhoncus sit amet.</p>
+        <p>Proin vitae elit est, ut accumsan arcu. Sed consectetur.</p>
+        <p>Donec molestie massa id lorem hendrerit eu bibendum augue.</p>
+        <p>Morbi ut lorem in purus facilisis vulputate. Sed purus nibh.</p>
+    </div>
+
+    <!-- 4. 글꼴 속성 -->
+    <h1>Lorem ipsum</h1>
+    <p class="a">Lorem ipsum</p>
+    <p class="b">Lorem ipsum</p>
+    <p class="c">Lorem ipsum</p>
+    <p class="d">Lorem ipsum</p>
+    <h1 class="arial">Lorem ipsum</h1>
+    <p class="roman">Lorem ipsum</p>
+    <p class="big italic bold center">Lorem ipsum dolor amer</p>
+    <p class="bold right">2019.07.10</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <span class="center">Lorem ipsum dolor amet</span>
+<br>
+
+    <!-- 5. 버튼 속성 -->
+    <div class="button">
+        <a href="#" class="big italic bold center">Click</a>
+    </div>
+
+</body>
+</html>
